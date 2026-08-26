@@ -1,19 +1,17 @@
-<<<<<<< HEAD
+# CreditPool (Python CLI)
 .creditpool/
 __pycache__/
 *.py[cod]
 *.egg-info/
 .eggs/
 dist/
-build/
 .pytest_cache/
 .venv/
 venv/
 .coverage
 htmlcov/
 *.sqlite
-.DS_Store
-=======
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -58,4 +56,3 @@ next-env.d.ts
 
 # local database
 /data/
->>>>>>> origin/main
