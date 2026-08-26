@@ -1,0 +1,14 @@
+.creditpool/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+*.sqlite
+.DS_Store
