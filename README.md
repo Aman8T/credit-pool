@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Credit Pool
 
 A Next.js application for creating shared credit pools and allocating credits.
@@ -27,3 +28,6 @@ Open [http://localhost:3000](http://localhost:3000).
 - `POST /api/pools/:id/allocate` — allocate credits (`{ "amount": 100 }`)
 
 SQLite data is stored in `data/credit-pool.db`.
+=======
+# credit-pool
+>>>>>>> 03c2ab34507a0deac747afa7dc328c4e09e08b0d
