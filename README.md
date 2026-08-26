@@ -1,3 +1,18 @@
+# credit-pool
+
+This repository currently contains **two unrelated implementations** that diverged on `main` and this branch. Git could not merge `README.md` because they describe different products.
+
+A product owner needs to choose a canonical app (or split repos) before this file can be a real project README.
+
+| Source | What it is | Entry points |
+| --- | --- | --- |
+| This branch (`cursor/creditpool-mvp-0362`) | Local-first Python CLI that runs official coding CLIs (`claude`, `codex`) in a git worktree and falls back on recognized rate limits | `pip install -e ".[dev]"` then `creditpool` — see `src/creditpool/`, `docs/` |
+| `origin/main` | Next.js app for creating shared credit pools and allocating credits | `pnpm install` / `pnpm dev` — see `src/app/`, `package.json`. SQLite in `data/credit-pool.db` |
+
+The CLI README (this PR) is preserved below. The Next.js README from `main` follows after the separator.
+
+---
+
 # CreditPool
 
 Local-first, quota-aware task runner for developers who already pay for multiple official AI coding CLIs.
@@ -72,3 +87,35 @@ Official Cursor print mode applies file writes only with `--force` / `--yolo`. V
 ## License
 
 MIT
+
+---
+
+# Credit Pool (from `main`, Next.js)
+
+A Next.js application for creating shared credit pools and allocating credits.
+
+## Development
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the development server |
+| `pnpm build` | Create a production build |
+| `pnpm start` | Run the production server |
+| `pnpm lint` | Run ESLint |
+
+## API
+
+- `GET /api/pools` — list credit pools
+- `POST /api/pools` — create a pool (`{ "name": "...", "totalCredits": 1000 }`)
+- `POST /api/pools/:id/allocate` — allocate credits (`{ "amount": 100 }`)
+
+SQLite data is stored in `data/credit-pool.db`.
